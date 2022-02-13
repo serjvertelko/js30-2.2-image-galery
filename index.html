@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/iconawasomefotns.css">
     <link rel="stylesheet" href="/style/style.css">
-    <title>Document</title>
+    <title>Unsplash API</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
@@ -22,7 +22,11 @@
                 <h1 class="header__logo-text">Unsplash API</h1>
             </div>
             <div class="header__search">
-                <input type="text" class="header__search-form" placeholder="Search..." maxlength="20">
+                <form method="get" class="header__search-formItem">
+                    <input type="text" class="header__search-form" placeholder="Search..."
+                        maxlength="20">
+                </form>
+
                 <div class="header__search-img"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
         </div>
@@ -30,55 +34,29 @@
     <main class="main">
         <div class="content-wrapper">
             <div class="main__images">
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
 
-                <div class="main__images-item">
-                    <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
-                        alt="image" class="main__images-img">
-                </div>
             </div>
         </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="content-wrapper">
+            <div class="footer__content">
+                <div class="footer__content-logo">
+                    <a href="https://rs.school/js-stage0/" target="blank"><img src="/img/rs_school_js.svg"
+                            alt="lRSSLogo" class="footer__content-img"></a>
+                </div>
+                <div class="footer__content-year">
+                    <h3 class="footer__content-text">2022</h3>
+                </div>
+                <div class="footer__content-github">
+                    <a href="https://github.com/serjvertelko" target="blank">
+                        <i class="fa-brands fa-github"></i>
+                        <h3 class="footer__content-text">Github</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="/script/main.js"></script>
 
