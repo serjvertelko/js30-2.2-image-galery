@@ -2,7 +2,35 @@ let API_URL = "https://api.unsplash.com/search/photos?query=осень&per_page=
 const API_URL_SEARCH = `https://api.unsplash.com/search/photos?query=`;
 const headerSearchForm = document.querySelector(".header__search-formItem");
 const headerSearchInput = document.querySelector(".header__search-form");
- 
+const mainImagesItemImg = document.querySelectorAll(".main__images-itemImg");
+const formClose = document.querySelector(".header__close-img");
+const formSearch = document.querySelector(".header__search-img");
+
+changeSerachImg();
+function changeSerachImg() {
+    let styleInput;
+    headerSearchInput.addEventListener("input", (e) => {
+        if (e.target.value) {
+            formClose.classList.remove("block")
+            formSearch.classList.add("block")
+        } else if (!e.target.value) {
+            formClose.classList.add("block")
+            formSearch.classList.remove("block")
+        }
+    })
+}
+
+
+function deleteInputText() {
+    formClose.addEventListener("click", () => {
+        headerSearchInput.value = "";
+        formClose.classList.add("block")
+        formSearch.classList.remove("block")
+        console.log(headerSearchInput.value)
+    })
+}
+deleteInputText();
+
 searchFoto()
 function searchFoto() {
     headerSearchForm.addEventListener("submit", (event) => {
@@ -30,12 +58,21 @@ function showFotos(data) {
     fotos.innerHTML = "";
     for (let i = 0; i < newData.results.length; i++) {
         let div = document.createElement('div');
-        div.classList.add("main__images-item");
-        div.style.backgroundImage = `url(${newData.results[i].urls.regular})`;
-        fotos.append(div)
+        div.classList.add("main__images-img");
+        div.innerHTML = `
+        <div class="main__images-item" style="background: url(${newData.results[i].urls.regular}); background-position: center; background-size: cover;  background-repeat: no-repeat;" ></div>
+        <div class="color-img"></div>
+        `;
+        fotos.append(div);
+       
     }
 }
 
+console.log(`
+Оценка - 70 балла(ов)
+Отзыв по пунктам ТЗ:
+Все пункты выполнены полностью!
+`)
 
 
 
@@ -56,15 +93,4 @@ function showFotos(data) {
 
 
 
-
-
-
-
-
-
-// mainImagesItem.innerHTML = `
-// <div class="main__images-item">
-// <img src="https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg" //
-//     alt="image" class="main__images-img">
-// <div class="color-img"></div>
-// </div>`;
+ 
