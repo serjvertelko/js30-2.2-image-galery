@@ -1,2 +1,1 @@
-
-# js30-2.2-image-galery
+https://serjvertelko.github.io/js30-2.2-image-galery/
